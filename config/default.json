@@ -1,0 +1,10 @@
+{
+  "tags": ["9gag", "barked", "meowed", "voyaged"],
+  "elasticsearch": {
+    "host": "localhost:9200"
+  },
+  "redis": {
+    "port": 6379,
+    "store_time": 600
+  }
+}

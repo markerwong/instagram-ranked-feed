@@ -1,0 +1,206 @@
+.fb-icon{
+  background-image: url(../img/d72dcf68ab6a.png);
+}
+.fb-icons2{
+  background-image: url(../img/b8541a6c7650.png);
+}
+.fb-icons3{
+  background-image: url(../img/193449797d0d.png);
+}
+.fb-icons-before,
+.fb-icons-before2{
+  &:before{
+    content: '';
+    display: block;
+    background-repeat: no-repeat;
+    float: left;
+    margin-right: 5px;
+  }
+}
+.fb-icons-before{
+  &:before{
+    background-image: url(../img/d72dcf68ab6a.png);
+  }
+}
+.fb-icons-before2{
+  &:before{
+    background-image: url(../img/b8541a6c7650.png);
+  }
+}
+
+.main-wrapper{
+  margin-top: 30px;
+}
+
+.list-wrapper{
+  border-left: 1px solid #dee2e6;
+  border-right: 1px solid #dee2e6;
+  border-bottom: 1px solid #dee2e6;
+  padding: 10px;
+
+  .list-row > div{
+    margin-bottom: 10px;
+  }
+
+  .list-content{
+    position: relative;
+    .list-img{
+      width: 100%;
+    }
+    &:hover .list-overlay{
+      display: block;
+    }
+    .list-overlay{
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      color: #FFF;
+      padding: 10px;
+      background-color: rgba(0, 0, 0, 0.3);
+      display: none;
+      span{
+        display: block;
+        &.like-number:before{
+          background-position: -321px -243px;
+        }
+        &.comment-number:before{
+          background-position: -300px -243px;
+        }
+        &:before{
+          height: 19px;
+          width: 19px;
+        }
+      }
+    }
+  }
+}
+
+.popup-outer-wrapper{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+
+  .popup-background{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+  }
+
+  .popup-wrapper{
+    position: absolute;
+    width: 80vw;
+    top: 10vw;
+    background-color: #FFF;
+    left: 10vw;
+
+    & > div{
+      position: relative;
+      width: 50%;
+      height: 100%;
+      float: left;
+    }
+
+    .popup-left-wrapper{
+      video,
+      img{
+        width: 100%;
+      }
+      .arrow{
+        cursor: pointer;
+        display: block;
+        margin-left: 12px;
+        margin-right: 12px;
+        overflow: hidden;
+        position: absolute;
+        pointer-events: auto;
+        text-indent: -9999em;
+        top: 50%;
+        margin-top: -15px;
+        background-size: 460px 417px;
+        height: 30px;
+        width: 30px;
+      }
+      .arrow-left{
+        left: 0;
+        background-position: -317px -257px;
+      }
+      .arrow-right{
+        right: 0;
+        background-position: -119px -352px;
+      }
+      .play{
+        position: absolute;
+        display: block;
+        height: 135px;
+        left: 50%;
+        margin-left: -67px;
+        margin-top: -67px;
+        top: 50%;
+        width: 135px;
+        background-size: 152px 135px;
+        background-position: 0 0;
+
+        &.playing{
+          opacity: 0;
+        }
+      }
+    }
+    .popup-rigth-wrapper{
+      a{
+        text-decoration: none;
+      }
+      .popup-rigth-inner-wrapper{
+        padding: 10px;
+      }
+      .create-time{
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        display: inline-block;
+        color: #000;
+      }
+      .icons-wrapper{
+        // position: absolute;
+        // bottom: 10px;
+        // right: 10px;
+        span{
+          display: inline-block;
+          margin-right: 10px;
+          &:before{
+            background-size: 460px 417px;
+            height: 24px;
+            width: 24px;
+          }
+        }
+      }
+      .like-number:before{
+        background-position: -413px -25px;
+      }
+      .comment-number:before{
+        background-position: -384px -322px;
+      }
+      .description{
+        font-size: 11pt;
+        overflow: auto;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 575px) {
+  .main-wrapper{
+    margin-top: 0;
+    padding: 0;
+  }
+  .popup-outer-wrapper .popup-wrapper > div{
+    width: 100%;
+  }
+}
