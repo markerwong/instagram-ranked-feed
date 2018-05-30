@@ -149,3 +149,7 @@
     padding: 0; }
   .popup-outer-wrapper .popup-wrapper > div {
     width: 100%; } }
+
+@media all and (min-width: 1200px) {
+  .popup-outer-wrapper .popup-wrapper {
+    top: 3vw; } }

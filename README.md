@@ -44,3 +44,15 @@ Server will fetch Instagram feeds when it start and after every 10 minutes. It g
 There's Redis to store Elasticsearch search result as cache data for 10 minutes. It call increase the time for getting feeds list and feed detail.
 
 A config file to store Elasticsearch and Redis endpoint.
+
+---
+
+## Future improvements
+
+1. Better support for some layout size on responsive
+
+2. Consider the structure of React to reduce layout render
+
+3. Feed list and feed detail are not fetch on the same time, there may be some data different. Should update feed list data when getting feed detail from Instagram
+
+4. Add preloader for getting data, image or video
